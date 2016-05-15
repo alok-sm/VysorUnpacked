@@ -1,0 +1,38 @@
+{
+   "app": {
+      "background": {
+         "persistent": true,
+         "scripts": [ "common/jquery-2.1.1.min.js", "common/jsencrypt.js", "common/google-analytics-bundle.js", "uglify.js" ]
+      }
+   },
+   "description": "A window to your Android",
+   "icons": {
+      "128": "icon.png",
+      "16": "icon.png",
+      "48": "icon.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAi734PoPrQ2TyGuPcgsQkpmRY8v4qCPrYsC+fFDjvr+MPLmF9y2Qdi8VoalmNJtMiT80iDC/xJudzrhi5cnOR8z3+QVQX0x4Jxp/eOLl9AHERcJIzJpOwjD/RRloeg5UTgGBs3jFgh/+TbL2td05cODBSb5LI44STv9JEavenvtHeKqtWS7xeHnQaAiGp7XBVyyRCuaBQ5U0p072CVzaYc3I0yLR+5tz4uM3P9afz/vIiIo1jAdqD7eSH4caulF0mVNzzZHaRwWPt96wS472QDxkBX0zrQG6xpAJwgxGvZob87Gel3V31Mp8Auk8em3YCElLsbA+7+YIaTIuiPtveuQIDAQAB",
+   "manifest_version": 2,
+   "minimum_chrome_version": "42",
+   "name": "Vysor (Beta)",
+   "optional_permissions": [ "clipboardWrite" ],
+   "permissions": [ "nativeMessaging", "browser", "gcm", "notifications", "https://gcm-http.googleapis.com/", "https://www.google-analytics.com/", {
+      "fileSystem": [ "write", "retainEntries", "directory" ]
+   }, "storage", "system.network", "usb" ],
+   "sockets": {
+      "tcp": {
+         "connect": "*"
+      },
+      "tcpServer": {
+         "listen": "*"
+      }
+   },
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "url_handlers": {
+      "vysor_presentation": {
+         "matches": [ "https://vysor.clockworkmod.com/view/*", "https://vysor.clockworkmod.com/app/vysor*" ],
+         "title": "Vysor Share"
+      }
+   },
+   "version": "1.0.6.7"
+}
